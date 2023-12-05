@@ -1,6 +1,8 @@
 module handy-translate
 
-go 1.21
+go 1.21.1
+
+toolchain go1.21.4
 
 require (
 	github.com/OwO-Network/gdeeplx v0.0.1
@@ -38,7 +40,7 @@ require (
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/leaanthony/go-ansi-parser v1.6.1 // indirect
 	github.com/leaanthony/u v1.1.0 // indirect
-	github.com/lmittmann/tint v1.0.0 // indirect
+	github.com/lmittmann/tint v1.0.3 // indirect
 	github.com/lufia/plan9stats v0.0.0-20230326075908-cb1d2100619a // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
@@ -73,8 +75,8 @@ require (
 	golang.org/x/exp v0.0.0-20230626212559-97b1e661b5df // indirect
 	golang.org/x/image v0.12.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
-	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/sys v0.14.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
 
-replace github.com/wailsapp/wails/v3 => D:\go_project\wails\v3
+replace github.com/wailsapp/wails/v3 => L:\go\src\wails\v3

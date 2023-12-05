@@ -49,6 +49,7 @@ export default function Translate({ variable, onUpdateVariable }) {
             config[service] = {}
         }
         setServiceConfig({ ...config });
+        console.log("serviceConfig",serviceConfig)
     };
     const onDragEnd = async (result) => {
 
@@ -58,6 +59,7 @@ export default function Translate({ variable, onUpdateVariable }) {
         if (translateServiceList !== null) {
             getServiceConfig();
         }
+        console.log("translateServiceList",translateServiceList)
     }, [translateServiceList]);
 
     return (

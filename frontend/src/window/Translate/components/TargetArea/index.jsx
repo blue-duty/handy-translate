@@ -27,6 +27,7 @@ import * as builtinServices from '../../../../services/translate';
 import { useConfig, useToastStyle, useVoice } from '../../../../hooks';
 import { sourceTextAtom, detectLanguageAtom } from '../SourceArea';
 import { sourceLanguageAtom, targetLanguageAtom } from '../LanguageArea';
+import { languageList } from '../../../../utils/language';
 
 
 export default function TargetArea(props) {
@@ -76,8 +77,11 @@ export default function TargetArea(props) {
 
         if (sourceText !== '' && sourceLanguage && targetLanguage) {
             const LanguageEnum = builtinServices[translateServiceName].Language;
+            console.log("LanguageEnum",LanguageEnum)
 
+            console.log(sourceLanguage,targetLanguage)
             if (sourceLanguage in LanguageEnum && targetLanguage in LanguageEnum) {
+                console.log(LanguageEnum[sourceLanguage],LanguageEnum[targetLanguage])
                 window.go.main.App.Transalte(sourceText, LanguageEnum[sourceLanguage], LanguageEnum[targetLanguage]).then((res) => {
                     setResult(res)
                 })

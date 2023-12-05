@@ -4,6 +4,7 @@ import (
 	"handy-translate/config"
 	"handy-translate/translate/baidu"
 	"handy-translate/translate/caiyun"
+	"handy-translate/translate/deepl"
 	"handy-translate/translate/youdao"
 	"sync"
 )
@@ -34,6 +35,14 @@ func GetTransalteWay(way string) Translate {
 		}
 	case baidu.Way:
 		t = &baidu.Baidu{
+			Translate: config.Translate{
+				Name:  config.Data.Translate[way].Name,
+				AppID: config.Data.Translate[way].AppID,
+				Key:   config.Data.Translate[way].Key,
+			},
+		}
+	case deepl.Way:
+		t = &deepl.DeepL{
 			Translate: config.Translate{
 				Name:  config.Data.Translate[way].Name,
 				AppID: config.Data.Translate[way].AppID,
